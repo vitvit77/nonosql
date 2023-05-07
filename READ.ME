@@ -1,0 +1,111 @@
+POST create:
+http://localhost:8080/api/mongo/student
+Request:
+{
+    "name": "Vit",
+    "group": "KH-22m",
+    "age": 45,
+    "course": "Computer sciense"
+}
+
+Response:
+{
+    "id": "644e869c07b9f571857076b4",
+    "name": "Vit",
+    "group": "KH-22m",
+    "age": 45,
+    "course": "Computer sciense"
+}
+
+GET view:
+http://localhost:8080/api/mongo/student?documentId=644e869c07b9f571857076b4
+
+Response:
+{
+    "name": "Vit",
+    "group": "KH-22m",
+    "age": 45,
+    "course": "Computer sciense"
+}
+
+PUT update:
+http://localhost:8080/api/mongo/student
+Request:
+{
+    "name": "Vitliy",
+    "group": "KH-22m",
+    "age": 45,
+    "course": "Computer sciense"
+}
+
+Response:
+{
+    "id": "644e869c07b9f571857076b4",
+    "name": "Vitliy",
+    "group": "KH-22m",
+    "age": 45,
+    "course": "Computer sciense"
+}
+DELETE:
+http://localhost:8080/api/mongo/student?documentId=644e869c07b9f571857076b4
+
+Response:
+{
+    "result": true
+}
+
+//////////////////////////////////////////REDIS////////////////////////////////////////////////////
+POST - create:
+http://localhost:8080/api/redis/employee
+Request:
+{
+    "key": 1,
+    "name": "Vitaliy",
+    "department": "Department IT",
+    "age": 45,
+    "salary": 150000.45
+}
+Response:
+{
+    "id": "edbcd97e-0bc9-4c43-b174-ea7634aa444d",
+    "name": "Vitaliy",
+    "department": "Department IT",
+    "age": 45,
+    "salary": 150000.45
+}
+
+PUT - update:
+http://localhost:8080/api/redis/employee?id=7e3be87d-4765-4ef0-8c25-b898b4c0bb26
+Request:
+{
+    "name": "Vitaliy",
+    "department": "Department 777777",
+    "age": 45,
+    "salary": 1600
+}
+Response:
+{
+    "id": "7e3be87d-4765-4ef0-8c25-b898b4c0bb26",
+    "name": "Vitaliy",
+    "department": "Department 777777",
+    "age": 45,
+    "salary": 1600.0
+}
+
+GET:
+http://localhost:8080/api/redis/employee?id=7e3be87d-4765-4ef0-8c25-b898b4c0bb26
+Response:
+{
+    "id": "7e3be87d-4765-4ef0-8c25-b898b4c0bb26",
+    "name": "Vitaliy",
+    "department": "Department 777777",
+    "age": 45,
+    "salary": 1600.0
+}
+
+DELETE:
+http://localhost:8080/api/redis/employee?id=7e3be87d-4765-4ef0-8c25-b898b4c0bb26
+Response:
+{
+    "result": true
+}
